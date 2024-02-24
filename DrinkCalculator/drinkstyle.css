@@ -1,0 +1,11 @@
+@import url("../styles.css");
+
+.main-container{
+
+    background-color: blueviolet;
+    width: 90%;
+}
+
+.calculation-container{
+    background-color: darksalmon;
+}

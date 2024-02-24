@@ -1,0 +1,1 @@
+const beerButton = document.getElementById('numberSlider');

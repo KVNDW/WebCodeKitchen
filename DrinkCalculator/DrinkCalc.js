@@ -1,18 +1,47 @@
 const beerButton1 = document.getElementById('button1');
-const beerButton4 = document.getElementById('button4');
-
-const fullscreenbutton = document.getElementById('to-fullscreen');
 
 const display = document.getElementById('display');
 
+const receipt = document.getElementById('receipt');
 
 
+
+
+let totalCost=0;
 
 const updateValue = () =>{
-    display.textContent = Number(display.textContent)+1;
+    totalCost+=5;
+
+
+    display.textContent = `${totalCost} CHF`;
+
+    console.log("button pressed");
+
+
+    const receiptComponent = receiptprojecor();
+    receipt.appendChild(receiptComponent);
+
 
 }
 
+const receiptprojecor =()=>{
+
+    const container = document.createElement('div');
+    container.setAttribute('class','receipt-projector-container');
+
+    const receipt = document.createElement('div');
+    receipt.setAttribute('class','receipt-container');
+    receipt.textContent = 'Beer 5 CHF';
+
+
+    container.appendChild(receipt);
+
+    return container;
+}
+
+
+
+/*
 const fullscreen = () =>{
 
         if (document.documentElement.requestFullscreen) {
@@ -26,8 +55,8 @@ const fullscreen = () =>{
         }
 
 }
-
-
-beerButton1.addEventListener("click",updateValue);
-beerButton4.addEventListener("click",updateValue);
 fullscreenbutton.addEventListener("click",fullscreen );
+
+*/
+beerButton1.addEventListener("click",updateValue);
+

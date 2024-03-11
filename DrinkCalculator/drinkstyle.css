@@ -2,16 +2,36 @@
 
 .main-container{
 
-    background-color: blueviolet;
-    width: 90%;
+    background-color: #ffffff;
+    width: 80%;
+
 }
 
-.calculation-container{
-    background-color: darksalmon;
+
+.calulation-container-container{
+
+
+    height: 80%;
+
 }
 
-#button4{
+.drinks-container{
+    display: grid;
 
-    width: 10em;
-    height: 10em;
+    grid-template-columns : repeat(auto-fill, minmax(6.25em, 1fr));
+
 }
+
+.drink-button font{}
+.drink-button{
+
+    height: 4rem;
+    width: 8rem;
+    padding: 1rem 2rem;
+
+    cursor: pointer;
+
+
+}
+
+

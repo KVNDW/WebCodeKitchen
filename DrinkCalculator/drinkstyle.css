@@ -16,9 +16,12 @@
 }
 
 .drinks-container{
-    display: grid;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
 
-    grid-template-columns : repeat(auto-fill, minmax(6.25em, 1fr));
+
+
 
 }
 

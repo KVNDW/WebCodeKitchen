@@ -4,6 +4,8 @@ const display = document.getElementById('display');
 
 const receipt = document.getElementById('receipt');
 
+const fulsscreenbutton = document.getElementById('to-fullscreen');
+
 
 
 
@@ -17,11 +19,8 @@ const updateValue = () =>{
 
     console.log("button pressed");
 
-
     const receiptComponent = receiptprojecor();
     receipt.appendChild(receiptComponent);
-
-
 }
 
 const receiptprojecor =()=>{
@@ -39,9 +38,6 @@ const receiptprojecor =()=>{
     return container;
 }
 
-
-
-/*
 const fullscreen = () =>{
 
         if (document.documentElement.requestFullscreen) {
@@ -55,8 +51,8 @@ const fullscreen = () =>{
         }
 
 }
-fullscreenbutton.addEventListener("click",fullscreen );
+fulsscreenbutton.addEventListener("click",fullscreen );
 
-*/
+
 beerButton1.addEventListener("click",updateValue);
 

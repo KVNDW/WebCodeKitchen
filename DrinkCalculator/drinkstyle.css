@@ -35,6 +35,20 @@
     cursor: pointer;
 
 
+
+    -webkit-appearance: none; /* Removes default iOS styling */
+    -moz-appearance: none; /* Removes default styling for older Firefox browsers */
+    appearance: none; /* Standard property for all browsers, currently not fully supported */
+
+    background-color: #f2f2f2; /* Default background color, change as needed */
+    border: 1px solid #cccccc; /* Default border, change as needed */
+    border-radius: 0.25rem; /* Adjusts the border-radius, change as needed */
+    font-family: inherit; /* Ensures font consistency with the rest of your webpage */
+    color: #333333; /* Default font color, change as needed */
+    font-size: 1rem; /* Adjusts the font size, change as needed */
+    text-align: center; /* Ensures text is centered */
+
+
 }
 
 

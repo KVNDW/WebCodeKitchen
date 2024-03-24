@@ -47,6 +47,7 @@
     color: #333333; /* Default font color, change as needed */
     font-size: 1rem; /* Adjusts the font size, change as needed */
     text-align: center; /* Ensures text is centered */
+    touch-action: manipulation;
 
 
 }

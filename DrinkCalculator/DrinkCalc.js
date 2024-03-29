@@ -7,6 +7,8 @@ const button6 = document.getElementById('button6');
 const button7 = document.getElementById('button7');
 const button8 = document.getElementById('button8');
 
+const ee = document.getElementById('ee');
+
 
 const display = document.getElementById('display');
 const receipt = document.getElementById('receipt');
@@ -24,35 +26,35 @@ const updateValue = (button) =>{
     let price=0;
 
     switch(button) {
-        case button1:
+        case 'button1':
             drinkname= "Bier";
             price = 5;
             break;
-        case button2:
+        case 'button2':
             drinkname= "Vodka Mate";
             price = 10;
             break;
-        case button3:
+        case 'button3':
             drinkname= "Sex on the Beach";
             price = 15;
             break;
-        case button4:
+        case 'button4':
             drinkname= "Shot";
             price = 6;
             break;
-        case button5:
+        case 'button5':
             drinkname= "Vodka-E";
             price = 16;
             break;
-        case button6:
+        case 'button6':
             drinkname= "Wasser+";
             price = 20;
             break;
-        case button7:
+        case 'button7':
             drinkname= "Gin Tonik";
             price = 5;
             break;
-        case button8:
+        case 'button8':
             drinkname= "Wasser Special";
             price = 10;
             break;
@@ -101,14 +103,14 @@ const fullscreen = () =>{
 }
 
 //buttons event listener
-button1.addEventListener("click",() =>updateValue(button1));
-button2.addEventListener("click",() =>updateValue(button2));
-button3.addEventListener("click",() =>updateValue(button3));
-button4.addEventListener("click",() =>updateValue(button4));
-button5.addEventListener("click",() =>updateValue(button5));
-button6.addEventListener("click",() =>updateValue(button6));
-button7.addEventListener("click",() =>updateValue(button7));
-button8.addEventListener("click",() =>updateValue(button8));
+button1.addEventListener("click",() =>updateValue(button1.id));
+button2.addEventListener("click",() =>updateValue(button2.id));
+button3.addEventListener("click",() =>updateValue(button3.id));
+button4.addEventListener("click",() =>updateValue(button4.id));
+button5.addEventListener("click",() =>updateValue(button5.id));
+button6.addEventListener("click",() =>updateValue(button6.id));
+button7.addEventListener("click",() =>updateValue(button7.id));
+button8.addEventListener("click",() =>updateValue(button8.id));
 
 //fullscreen listener
 fulsscreenbutton.addEventListener("click",fullscreen );

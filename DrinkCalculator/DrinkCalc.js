@@ -7,7 +7,9 @@ const button6 = document.getElementById('button6');
 const button7 = document.getElementById('button7');
 const button8 = document.getElementById('button8');
 
-const ee = document.getElementById('ee');
+const deletebutton = document.getElementById('delete');
+
+
 
 
 const display = document.getElementById('display');
@@ -58,6 +60,11 @@ const updateValue = (button) =>{
             drinkname= "Wasser Special";
             price = 10;
             break;
+        case 'delete':
+            drinkname= "delete";
+            totalCost=0;
+            price = 0;
+            break;
         default:
     }
 
@@ -68,6 +75,14 @@ const updateValue = (button) =>{
     display.textContent = `${totalCost} CHF`;
 
     const receiptComponent = receiptprojecor(drinkname, price);
+
+    if (drinkname=='delete'){
+
+        receipt.innerHTML = '';
+        receipt2.textContent='';
+    }
+
+
     receipt.appendChild(receiptComponent);
 }
 
@@ -84,6 +99,8 @@ const receiptprojecor =(drinkname, price)=>{
     receipt2.textContent = `  - ${price} CHF`;
     container.appendChild(receipt);
     container.appendChild(receipt2);
+
+
 
 
     return container;
@@ -111,6 +128,8 @@ button5.addEventListener("click",() =>updateValue(button5.id));
 button6.addEventListener("click",() =>updateValue(button6.id));
 button7.addEventListener("click",() =>updateValue(button7.id));
 button8.addEventListener("click",() =>updateValue(button8.id));
+button8.addEventListener("click",() =>updateValue(button8.id));
+deletebutton.addEventListener("click",() =>updateValue(deletebutton.id));
 
 //fullscreen listener
 fulsscreenbutton.addEventListener("click",fullscreen );

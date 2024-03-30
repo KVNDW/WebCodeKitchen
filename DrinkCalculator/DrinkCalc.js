@@ -11,13 +11,13 @@ const buttonScreen4 = document.getElementById('text-button4');
 let totalCost=0;
 const drinks ={
     button1:{name: "Bier",price:5,clickcount:0},
-    button2:{name: "Vodka Mate",price:10},
-    button3:{name: "Sex on the Beach",price:15},
-    button4:{name: "Shot",price:6},
-    button5:{name: "Vodka-E",price:16},
-    button6:{name: "Wasser+",price:20},
-    button7:{name: "Gin Tonic",price:5},
-    button8:{name: "Wasser Special",price:10},
+    button2:{name: "Vodka Mate",price:10,clickcount:0},
+    button3:{name: "Sex on the Beach",price:15,clickcount:0},
+    button4:{name: "Shot",price:6,clickcount:0},
+    button5:{name: "Vodka-E",price:16,clickcount:0},
+    button6:{name: "Wasser+",price:20,clickcount:0},
+    button7:{name: "Gin Tonic",price:5,clickcount:0},
+    button8:{name: "Wasser Special",price:10,clickcount:0},
 }
 
 const updateValue = (buttonId) =>{

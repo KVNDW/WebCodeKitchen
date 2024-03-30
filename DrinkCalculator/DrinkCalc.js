@@ -1,109 +1,64 @@
-const button1 = document.getElementById('button1');
-const button2 = document.getElementById('button2');
-const button3 = document.getElementById('button3');
-const button4 = document.getElementById('button4');
-const button5 = document.getElementById('button5');
-const button6 = document.getElementById('button6');
-const button7 = document.getElementById('button7');
-const button8 = document.getElementById('button8');
-
+//used in updateValue
+const drinksContainer = document.querySelector('.drinks-container');
 const deletebutton = document.getElementById('delete');
-
-
-
-
+//used for receipt
 const display = document.getElementById('display');
 const receipt = document.getElementById('receipt');
-
+//fullscreen
 const fulsscreenbutton = document.getElementById('to-fullscreen');
 
-
-
-
+//data
 let totalCost=0;
+const drinks ={
+    button1:{name: "Bier",price:5},
+    button2:{name: "Vodka Mate",price:10},
+    button3:{name: "Sex on the Beach",price:15},
+    button4:{name: "Shot",price:6},
+    button5:{name: "Vodka-E",price:16},
+    button6:{name: "Wasser+",price:20},
+    button7:{name: "Gin Tonic",price:5},
+    button8:{name: "Wasser Special",price:10},
+}
 
-const updateValue = (button) =>{
+const updateValue = (buttonId) =>{
 
-    let drinkname="";
-    let price=0;
+    if(buttonId != 'delete'){
+        totalCost +=  drinks[buttonId].price;
+        const receiptComponent = receiptprojecor(drinks[buttonId].name, drinks[buttonId].price);
+        receipt.appendChild(receiptComponent);
 
-    switch(button) {
-        case 'button1':
-            drinkname= "Bier";
-            price = 5;
-            break;
-        case 'button2':
-            drinkname= "Vodka Mate";
-            price = 10;
-            break;
-        case 'button3':
-            drinkname= "Sex on the Beach";
-            price = 15;
-            break;
-        case 'button4':
-            drinkname= "Shot";
-            price = 6;
-            break;
-        case 'button5':
-            drinkname= "Vodka-E";
-            price = 16;
-            break;
-        case 'button6':
-            drinkname= "Wasser+";
-            price = 20;
-            break;
-        case 'button7':
-            drinkname= "Gin Tonik";
-            price = 5;
-            break;
-        case 'button8':
-            drinkname= "Wasser Special";
-            price = 10;
-            break;
-        case 'delete':
-            drinkname= "delete";
-            totalCost=0;
-            price = 0;
-            break;
-        default:
-    }
-
-    totalCost += price;
-
-
-
-    display.textContent = `${totalCost} CHF`;
-
-    const receiptComponent = receiptprojecor(drinkname, price);
-
-    if (drinkname=='delete'){
-
+    }else{
         receipt.innerHTML = '';
-        receipt2.textContent='';
+        totalCost=0;
     }
-
-
-    receipt.appendChild(receiptComponent);
+    display.textContent = `${totalCost} CHF`;
 }
 
 const receiptprojecor =(drinkname, price)=>{
 
-    const container = document.createElement('div');
-    container.setAttribute('class','receipt-projector-container');
+    //container where all elements are in
+    const receiptContainer = document.createElement('div');
+    receiptContainer.setAttribute('class','receipt-container');
 
-    const receipt = document.createElement('div');
-    const receipt2 = document.createElement('div');
-    receipt.setAttribute('class','receipt-container');
-    receipt2.setAttribute('class','receipt-container');
-    receipt.textContent = `${drinkname} : : : : : : : : : : : :`;
-    receipt2.textContent = `  - ${price} CHF`;
-    container.appendChild(receipt);
-    container.appendChild(receipt2);
+    //set name attribute
+    const nameContainer = document.createElement('div');
+    nameContainer.setAttribute('class','receipt-name');
 
-
+    //set price attribute
+    const priceContainer = document.createElement('div');
+    priceContainer.setAttribute('class','receipt-price');
 
 
-    return container;
+    nameContainer.textContent = `${drinkname} `;
+    priceContainer.textContent = `${price} CHF`;
+
+
+
+
+
+    receiptContainer.appendChild(nameContainer);
+    receiptContainer.appendChild(priceContainer);
+    return receiptContainer;
 }
 
 const fullscreen = () =>{
@@ -119,16 +74,13 @@ const fullscreen = () =>{
         }
 }
 
-//buttons event listener
-button1.addEventListener("click",() =>updateValue(button1.id));
-button2.addEventListener("click",() =>updateValue(button2.id));
-button3.addEventListener("click",() =>updateValue(button3.id));
-button4.addEventListener("click",() =>updateValue(button4.id));
-button5.addEventListener("click",() =>updateValue(button5.id));
-button6.addEventListener("click",() =>updateValue(button6.id));
-button7.addEventListener("click",() =>updateValue(button7.id));
-button8.addEventListener("click",() =>updateValue(button8.id));
-button8.addEventListener("click",() =>updateValue(button8.id));
+// new buttoneventlistener
+drinksContainer.addEventListener('click', (event) => {
+    if (event.target.classList.contains('drink-button')) {
+        updateValue(event.target.id);
+    }
+});
+
 deletebutton.addEventListener("click",() =>updateValue(deletebutton.id));
 
 //fullscreen listener

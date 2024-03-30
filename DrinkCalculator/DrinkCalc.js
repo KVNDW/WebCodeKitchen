@@ -1,16 +1,16 @@
-//used in updateValue
+//set uo for listener
 const drinksContainer = document.querySelector('.drinks-container');
 const deletebutton = document.getElementById('delete');
-//used for receipt
 const display = document.getElementById('display');
 const receipt = document.getElementById('receipt');
-//fullscreen
 const fulsscreenbutton = document.getElementById('to-fullscreen');
+
+const buttonScreen4 = document.getElementById('text-button4');
 
 //data
 let totalCost=0;
 const drinks ={
-    button1:{name: "Bier",price:5},
+    button1:{name: "Bier",price:5,clickcount:0},
     button2:{name: "Vodka Mate",price:10},
     button3:{name: "Sex on the Beach",price:15},
     button4:{name: "Shot",price:6},
@@ -23,8 +23,21 @@ const drinks ={
 const updateValue = (buttonId) =>{
 
     if(buttonId != 'delete'){
+        drinks[buttonId].clickcount +=1;
+
+
+
+        const clickedButton = document.getElementById(buttonId);
+
+        if(clickedButton) {
+            clickedButton.textContent = `${drinks[buttonId].name} (${drinks[buttonId].clickcount})`;
+        }
+
+
+
+
         totalCost +=  drinks[buttonId].price;
-        const receiptComponent = receiptprojecor(drinks[buttonId].name, drinks[buttonId].price);
+        const receiptComponent = receiptprojector(drinks[buttonId].name, drinks[buttonId].price);
         receipt.appendChild(receiptComponent);
 
     }else{
@@ -34,7 +47,7 @@ const updateValue = (buttonId) =>{
     display.textContent = `${totalCost} CHF`;
 }
 
-const receiptprojecor =(drinkname, price)=>{
+const receiptprojector =(drinkname, price)=>{
 
     //container where all elements are in
     const receiptContainer = document.createElement('div');
@@ -47,17 +60,15 @@ const receiptprojecor =(drinkname, price)=>{
     //set price attribute
     const priceContainer = document.createElement('div');
     priceContainer.setAttribute('class','receipt-price');
-
-
+    
+    //set content from specific drink for receipt
     nameContainer.textContent = `${drinkname} `;
     priceContainer.textContent = `${price} CHF`;
 
-
-
-
-
+    //add containers to returncontainer
     receiptContainer.appendChild(nameContainer);
     receiptContainer.appendChild(priceContainer);
+    
     return receiptContainer;
 }
 
@@ -74,7 +85,7 @@ const fullscreen = () =>{
         }
 }
 
-// new buttoneventlistener
+// eventlistener
 drinksContainer.addEventListener('click', (event) => {
     if (event.target.classList.contains('drink-button')) {
         updateValue(event.target.id);
@@ -82,6 +93,4 @@ drinksContainer.addEventListener('click', (event) => {
 });
 
 deletebutton.addEventListener("click",() =>updateValue(deletebutton.id));
-
-//fullscreen listener
 fulsscreenbutton.addEventListener("click",fullscreen );

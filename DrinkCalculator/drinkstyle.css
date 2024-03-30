@@ -1,39 +1,17 @@
 @import url("../styles.css");
 
 .main-container{
-
     background-color: #ffffff;
     width: 80%;
-
 }
 
-.receipt-projector-container{
-
-    display: flex;
-    align-items: center;
-
-}
-
-.calulation-container-container{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-
-    height: 80%;
-
-}
 
 .drinks-container{
     display: flex;
     flex-wrap: wrap;
-
-
-
-
-
+    align-items: center;
 }
 
-.drink-button font{}
 .drink-button{
 
     height: 4rem;
@@ -42,22 +20,29 @@
 
     cursor: pointer;
 
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
 
+    background-color: #f2f2f2;
+    border: 1px solid #cccccc;
+    border-radius: 0.25rem;
+    font-family: inherit;
 
-    -webkit-appearance: none; /* Removes default iOS styling */
-    -moz-appearance: none; /* Removes default styling for older Firefox browsers */
-    appearance: none; /* Standard property for all browsers, currently not fully supported */
+    font-size: 0.85rem;
+    text-align: center;
 
-    background-color: #f2f2f2; /* Default background color, change as needed */
-    border: 1px solid #cccccc; /* Default border, change as needed */
-    border-radius: 0.25rem; /* Adjusts the border-radius, change as needed */
-    font-family: inherit; /* Ensures font consistency with the rest of your webpage */
-    color: #333333; /* Default font color, change as needed */
-    font-size: 1rem; /* Adjusts the font size, change as needed */
-    text-align: center; /* Ensures text is centered */
     touch-action: manipulation;
+}
 
+.drink-button:hover{
+    background-color: #d9d9d9;
+}
 
+.receipt-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 

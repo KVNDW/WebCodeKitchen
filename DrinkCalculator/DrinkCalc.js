@@ -25,16 +25,10 @@ const updateValue = (buttonId) =>{
     if(buttonId != 'delete'){
         drinks[buttonId].clickcount +=1;
 
-
-
         const clickedButton = document.getElementById(buttonId);
-
         if(clickedButton) {
             clickedButton.textContent = `${drinks[buttonId].name} (${drinks[buttonId].clickcount})`;
         }
-
-
-
 
         totalCost +=  drinks[buttonId].price;
         const receiptComponent = receiptprojector(drinks[buttonId].name, drinks[buttonId].price);

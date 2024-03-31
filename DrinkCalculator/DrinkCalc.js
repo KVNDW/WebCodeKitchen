@@ -1,23 +1,22 @@
-//set uo for listener
+//set up for listener
+
 const drinksContainer = document.querySelector('.drinks-container');
 const deletebutton = document.getElementById('delete');
 const display = document.getElementById('display');
 const receipt = document.getElementById('receipt');
 const fulsscreenbutton = document.getElementById('to-fullscreen');
 
-const buttonScreen4 = document.getElementById('text-button4');
-
 //data
 let totalCost=0;
 const drinks ={
-    button1:{name: "Bier",price:5,clickcount:0},
-    button2:{name: "Vodka Mate",price:10,clickcount:0},
-    button3:{name: "Sex on the Beach",price:15,clickcount:0},
+    button1:{name: "Biwwer",price:5,clickcount:0},
+    button2:{name: "Vodwka Mate",price:10,clickcount:0},
+    button3:{name: "Sexww on the Beach",price:15,clickcount:0},
     button4:{name: "Shot",price:6,clickcount:0},
-    button5:{name: "Vodka-E",price:16,clickcount:0},
+    button5:{name: "Vodddka-E",price:16,clickcount:0},
     button6:{name: "Wasser+",price:20,clickcount:0},
     button7:{name: "Gin Tonic",price:5,clickcount:0},
-    button8:{name: "Wasser Special",price:10,clickcount:0},
+    button8:{name: "Wasswwwr Special",price:10,clickcount:0},
 }
 
 const updateValue = (buttonId) =>{
@@ -35,6 +34,18 @@ const updateValue = (buttonId) =>{
         receipt.appendChild(receiptComponent);
 
     }else{
+
+        Object.keys(drinks).forEach(key => {
+
+            drinks[key].clickcount = 0;
+            const currentButton=document.getElementById(key);
+            currentButton.textContent = `${drinks[key].name}`;
+
+        });
+
+
+
+
         receipt.innerHTML = '';
         totalCost=0;
     }
@@ -85,6 +96,11 @@ drinksContainer.addEventListener('click', (event) => {
         updateValue(event.target.id);
     }
 });
+
+document.addEventListener('DOMContentLoaded', () => {
+    updateValue('delete');
+});
+
 
 deletebutton.addEventListener("click",() =>updateValue(deletebutton.id));
 fulsscreenbutton.addEventListener("click",fullscreen );

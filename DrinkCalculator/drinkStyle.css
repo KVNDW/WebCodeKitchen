@@ -1,6 +1,6 @@
 
 body{
-    background-color: #ffffff;
+    background-color: #fffcd2;
     display: flex;
     justify-content: center;
 
@@ -78,7 +78,7 @@ h1{
 
     background-color: #ffffff;
     color: #000000;
-    border: 1px solid #b6b5af;
+    border: 1px solid #fcbe83;
     border-radius: 1.1rem;
     font-family: inherit;
 
@@ -142,3 +142,4 @@ h1{
 #first{
     margin: 0.5rem;
 }
+

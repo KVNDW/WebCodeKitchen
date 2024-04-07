@@ -32,13 +32,16 @@ h1{
 
 
 .drinks-container{
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 10px;
+    background-color: #2196F3;
+    padding: 10px;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 30px;
+    border-radius: 1.1rem;
 
-
-        margin: 0 auto;
-        width: fit-content;
 
 
 }
@@ -49,7 +52,10 @@ h1{
     justify-content: space-between;
 
 
+
+
 }
+
 
 
 .drink-button{
@@ -89,7 +95,7 @@ h1{
 }
 
 .receipt-and-display {
-    padding: 1.2rem;
+    margin-top: 1rem;
 }
 
 .horizontal-line {
@@ -100,13 +106,12 @@ h1{
 
 }
 
-.calc-container {
-    margin-left: 1rem;
-}
+
 .bottom-container{
     display: flex;
     align-items: center;
     justify-content: space-between;
+    margin-bottom: 1rem;
 
 }
 
@@ -122,4 +127,9 @@ h1{
     height: 2rem;
     width: 6rem;
     background-color: #ff6161;
+}
+
+.split {
+    grid-column-start: 1;
+    grid-column-end: 4;
 }

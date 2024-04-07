@@ -11,12 +11,12 @@ body{
 
 h1{
     font-weight: bold;
-    margin-bottom: 0.2rem;
+    margin-bottom: 0.4rem;
 }
 
 .calc-container {
 
-    padding: 0.5rem;
+    padding: 0.35rem;
 }
 
 .main-container {
@@ -78,7 +78,7 @@ h1{
 
 .drink-button{
 
-    height: 5rem;
+    height: 4.6rem;
     width: 6.5rem;
 
 
@@ -138,12 +138,12 @@ h1{
 #to-fullscreen{
     padding: 0rem;
     font-size: 0.7rem;
-    height: 2rem;
+    height: 3rem;
     width: 6rem;
 }
 #delete{
     font-size: 0.7rem;
-    height: 2rem;
+    height: 3rem;
     width: 6rem;
     background-color: #ff6161;
 }

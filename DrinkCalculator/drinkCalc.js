@@ -64,18 +64,32 @@ const receiptprojector =(drinkname, price)=>{
     return receiptContainer;
 }
 
-const fullscreen = () =>{
+const fullscreen = () => {
+
+    if (!document.fullscreenElement) {
 
         if (document.documentElement.requestFullscreen) {
             document.documentElement.requestFullscreen();
-        } else if (document.documentElement.mozRequestFullScreen) {
+        } else if (document.documentElement.mozRequestFullScreen) { // Firefox
             document.documentElement.mozRequestFullScreen();
-        } else if (document.documentElement.webkitRequestFullscreen) {
+        } else if (document.documentElement.webkitRequestFullscreen) { // Chrome, Safari, and Opera
             document.documentElement.webkitRequestFullscreen();
-        } else if (document.documentElement.msRequestFullscreen) {
+        } else if (document.documentElement.msRequestFullscreen) { // IE/Edge
             document.documentElement.msRequestFullscreen();
         }
+    } else {
+        if (document.exitFullscreen) {
+            document.exitFullscreen();
+        } else if (document.mozCancelFullScreen) {
+            document.mozCancelFullScreen();
+        } else if (document.webkitExitFullscreen) {
+            document.webkitExitFullscreen();
+        } else if (document.msExitFullscreen) {
+            document.msExitFullscreen();
+        }
+    }
 }
+
 
 // eventlistener
 drinksContainer.addEventListener('click', (event) => {

@@ -18,7 +18,7 @@ const updateValue = (buttonId) =>{
 
         const clickedButton = document.getElementById(buttonId);
         if(clickedButton) {
-            clickedButton.textContent = `${drinks[buttonId].name} (${drinks[buttonId].clickcount})`;
+            clickedButton.innerHTML = `${drinks[buttonId].name} <br>(${drinks[buttonId].clickcount})`;
         }
 
         totalCost +=  drinks[buttonId].price;

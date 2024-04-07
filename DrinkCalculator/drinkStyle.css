@@ -1,6 +1,6 @@
 
 body{
-    background-color: #cfd347;
+    background-color: #ffffff;
     display: flex;
     justify-content: center;
 
@@ -13,14 +13,20 @@ h1{
     font-weight: bold;
 }
 
+.calc-container{
+
+    padding: 0.5rem;
+}
+
 .main-container {
-    display: flex;
-    flex-wrap: wrap;
+
+    align-items: center;
     justify-content: space-around;
     box-sizing: border-box;
     width: 100%;
     max-width: 100%;
-    background-color: rgba(255, 231, 77, 0.8);
+    background-color: #fcfa83;
+
 }
 
 @media (min-width: 768px) {
@@ -32,10 +38,14 @@ h1{
 
 
 .drinks-container{
+    box-shadow: 5px 5px 10px 10px rgba(0.25, 0.25, 0.25, 0.25);
+    /*border:1px solid black;*/
+
     display: grid;
     grid-template-columns: auto auto auto;
-    gap: 10px;
-    background-color: #2196F3;
+    gap: 0.1rem;
+
+    background-color:#fcfa83;
     padding: 10px;
     text-align: center;
     padding: 20px 0;
@@ -61,7 +71,7 @@ h1{
 .drink-button{
 
     height: 5rem;
-    width: 6rem;
+    width: 7rem;
     padding: 0.1rem 1.8rem;
 
     margin: 0.5rem;
@@ -84,7 +94,8 @@ h1{
 }
 
 .drink-button:hover{
-    background-color: #d9d9d9;
+    background-color:#fcbe83 ;
+    border-color: #ffffff;
 }
 
 .receipt-container{

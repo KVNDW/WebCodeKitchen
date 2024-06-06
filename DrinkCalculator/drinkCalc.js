@@ -62,7 +62,7 @@ const receiptprojector =(drinkname, price)=>{
     priceContainer.textContent = `${price} CHF`;
 
     //add containers to returncontainer
-    receiptContainer.appendChild(closecontainer);
+    //receiptContainer.appendChild(closecontainer);
     receiptContainer.appendChild(nameContainer);
     receiptContainer.appendChild(priceContainer);
     

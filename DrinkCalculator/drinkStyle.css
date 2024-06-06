@@ -16,10 +16,10 @@ h1{
 }
 
 .calc-container {
-    border: 2px solid #afafaf;
+    border: 2px solid #e3dfdf;
     border-radius: 0.5rem;
     padding: 0.35rem;
-    background: linear-gradient(150deg, #e75b5b 10%,#efe628 95% );
+    background: linear-gradient(150deg, #8bdcc1 5%, #e2f6e5 80% );
 margin-bottom: 2rem;
 }
 
@@ -31,7 +31,7 @@ margin-bottom: 2rem;
     align-items: center;
     width: 100%;
     max-width: 100%;
-    background-color: #ffffff;
+    background-color: #E2F6E5FF;
 
 }
 
@@ -71,7 +71,6 @@ margin-bottom: 2rem;
     height: 4.6rem;
     width: 6.5rem;
 
-
     margin: 0.5rem;
 
     cursor: pointer;
@@ -84,7 +83,6 @@ margin-bottom: 2rem;
     backdrop-filter: blur(40px); /* Blur effect */
     -webkit-backdrop-filter: blur(10px); /* For Safari */
 
-
     border: none;
     border-radius: 0.5rem;
     font-family: inherit;
@@ -94,8 +92,9 @@ margin-bottom: 2rem;
     touch-action: manipulation;
 }
 
+
 .drink-button:hover{
-    background-color: rgba(255, 255, 255, 0.5);
+    background-color: rgba(255, 255, 255, 0.69);
 }
 
 .receipt-container{

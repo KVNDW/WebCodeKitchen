@@ -19,8 +19,8 @@ h1{
     border: 2px solid #afafaf;
     border-radius: 0.5rem;
     padding: 0.35rem;
-    background: radial-gradient(ellipse, #f5dc43, #ec4646);
-    margin-bottom: 2rem;
+    background: linear-gradient(150deg, #e75b5b 10%,#efe628 95% );
+margin-bottom: 2rem;
 }
 
 .main-container {

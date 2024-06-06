@@ -7,6 +7,9 @@ const display = document.getElementById('display');
 const receipt = document.getElementById('receipt');
 const fullscreenbutton = document.getElementById('to-fullscreen');
 
+const calcuationButton = document.getElementById('calculation-button');
+const calculationDisplay = document.getElementById('calculation-display');
+
 //data
 let totalCost=0;
 
@@ -37,6 +40,9 @@ const updateValue = (buttonId) =>{
         totalCost=0;
     }
     display.textContent = `${totalCost} CHF`;
+
+    calculationDisplay.textContent = Number(calcuationButton.textContent) - Number(display.textContent);
+
 }
 
 const receiptprojector =(drinkname, price)=>{
@@ -109,3 +115,5 @@ document.addEventListener('DOMContentLoaded', () => {
 
 deletebutton.addEventListener("click",() =>updateValue(deletebutton.id));
 fullscreenbutton.addEventListener("click",fullscreen );
+
+calcuationButton.addEventListener("click",() =>updateValue(calcuationButton.id))

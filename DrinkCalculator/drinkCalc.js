@@ -7,7 +7,7 @@ const display = document.getElementById('display');
 const receipt = document.getElementById('receipt');
 const fullscreenbutton = document.getElementById('to-fullscreen');
 
-const calcuationButton = document.getElementById('calculation-button');
+const calculationButton = document.getElementById('calculation-button');
 const calculationDisplay = document.getElementById('calculation-display');
 
 //data
@@ -16,7 +16,7 @@ let totalCost=0;
 
 const updateValue = (buttonId) =>{
 
-    if(buttonId != 'delete'){
+    if(buttonId != 'delete' &&buttonId != 'calculation-button' ){
         drinks[buttonId].clickcount +=1;
 
         const clickedButton = document.getElementById(buttonId);
@@ -28,7 +28,8 @@ const updateValue = (buttonId) =>{
         const receiptComponent = receiptprojector(drinks[buttonId].name, drinks[buttonId].price);
         receipt.appendChild(receiptComponent);
 
-    }else{
+    }else if(buttonId != 'calculation-button')
+    {
 
         Object.keys(drinks).forEach(key => {
             drinks[key].clickcount = 0;
@@ -41,7 +42,11 @@ const updateValue = (buttonId) =>{
     }
     display.textContent = `${totalCost} CHF`;
 
-    calculationDisplay.textContent = Number(calcuationButton.textContent) - Number(display.textContent);
+    console.log(calculationButton.value);
+    const calculationResult = calculationButton.value - totalCost;
+    calculationDisplay.textContent = `Rückgeld ${calculationResult} CHF`;
+
+
 
 }
 
@@ -116,4 +121,4 @@ document.addEventListener('DOMContentLoaded', () => {
 deletebutton.addEventListener("click",() =>updateValue(deletebutton.id));
 fullscreenbutton.addEventListener("click",fullscreen );
 
-calcuationButton.addEventListener("click",() =>updateValue(calcuationButton.id))
+calculationButton.addEventListener("input",() =>updateValue(calculationButton.id))

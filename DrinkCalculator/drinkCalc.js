@@ -52,12 +52,17 @@ const receiptprojector =(drinkname, price)=>{
     //set price attribute
     const priceContainer = document.createElement('div');
     priceContainer.setAttribute('class','receipt-price');
+
+    const closecontainer = document.createElement('button')
+    closecontainer.setAttribute('type','button')
     
     //set content from specific drink for receipt
+    closecontainer.textContent='x';
     nameContainer.textContent = `${drinkname} `;
     priceContainer.textContent = `${price} CHF`;
 
     //add containers to returncontainer
+    receiptContainer.appendChild(closecontainer);
     receiptContainer.appendChild(nameContainer);
     receiptContainer.appendChild(priceContainer);
     

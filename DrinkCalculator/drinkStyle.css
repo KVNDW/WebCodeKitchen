@@ -1,6 +1,6 @@
 
 body{
-    background-color: #fcfa83;
+    background-color: #ffffff;
     display: flex;
     justify-content: center;
 
@@ -12,11 +12,15 @@ body{
 h1{
     font-weight: bold;
     margin-bottom: 0.4rem;
+    text-align: center;
 }
 
 .calc-container {
-
+    border: 2px solid #afafaf;
+    border-radius: 0.5rem;
     padding: 0.35rem;
+    background: radial-gradient(ellipse, #ffffff, #50d26f);
+    margin-bottom: 2rem;
 }
 
 .main-container {
@@ -27,7 +31,7 @@ h1{
     align-items: center;
     width: 100%;
     max-width: 100%;
-    background-color: #fcfa83;
+    background-color: #ffffff;
 
 }
 
@@ -37,18 +41,18 @@ h1{
 
 
 .drinks-container{
-    box-shadow: 5px 5px 10px 10px rgba(0.25, 0.25, 0.25, 0.25);
+
 
 
     display: grid;
     grid-template-columns: auto auto auto;
     gap: 0.1rem;
 
-    background-color:#fcfa83;
+
 
     text-align: center;
     font-size: 30px;
-    border-radius: 1.1rem;
+    border-radius: 0.5rem;
 
 }
 
@@ -62,6 +66,8 @@ h1{
 
 .drink-button{
 
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2), -1px -1px 2px rgba(0, 0, 0, 0.1);
+
     height: 4.6rem;
     width: 6.5rem;
 
@@ -74,10 +80,10 @@ h1{
     -moz-appearance: none;
     appearance: none;
 
-    background-color: #ffffff;
+    background-color: #afe0b8;
     color: #000000;
-    border: 1px solid #fcbe83;
-    border-radius: 1.1rem;
+    border: none;
+    border-radius: 0.5rem;
     font-family: inherit;
 
     font-size: 0.8rem;
@@ -86,7 +92,7 @@ h1{
 }
 
 .drink-button:hover{
-    background-color:#fcbe83 ;
+    background-color: #ffffff;
     border-color: #ffffff;
 }
 
@@ -141,3 +147,13 @@ h1{
     margin: 0.5rem;
 }
 
+.titel-flex{
+    display: flex;
+
+}
+
+.img-titel{
+    width: 6rem;
+    height: 6rem;
+    text-align: center;
+}

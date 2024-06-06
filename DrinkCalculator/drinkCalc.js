@@ -44,7 +44,7 @@ const updateValue = (buttonId) =>{
 
     console.log(calculationButton.value);
     const calculationResult = calculationButton.value - totalCost;
-    calculationDisplay.textContent = `Rückgeld ${calculationResult} CHF`;
+    calculationDisplay.textContent = `${calculationResult} CHF`;
 
 
 

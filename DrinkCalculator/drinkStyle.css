@@ -99,13 +99,14 @@ h1{
     appearance: none;
 
     background-color: rgba(255, 255, 255, 0.2);
-    backdrop-filter: blur(40px); /* Blur effect */
-    -webkit-backdrop-filter: blur(10px); /* For Safari */
+    backdrop-filter: blur(40px);
+    -webkit-backdrop-filter: blur(10px);
 
     border: none;
     border-radius: 0.5rem;
     font-family: inherit;
 
+    color: black;
     font-size: 0.8rem;
     text-align: center;
     touch-action: manipulation;

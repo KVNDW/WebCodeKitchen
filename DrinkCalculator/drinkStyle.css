@@ -1,12 +1,9 @@
-
 body{
     background-color: #ffffff;
     display: flex;
     justify-content: center;
-
     font-family: Arial;
     margin: 0;
-
 }
 
 h1{
@@ -23,19 +20,16 @@ h1{
 }
 
 .main-container {
-
     padding-top: 1.25rem;
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 100%;
     max-width: 100%;
-    background: linear-gradient(150deg, #8bdcc1 5%, #e2f6e5 80% );
+    background: linear-gradient(150deg, #8bdcc1 10%, #e2f6e5 73% );
 }
 
 @media (min-width: 500px) {
-
-
     .calc-container {
         border: 2px solid #e3dfdf;
         border-radius: 0.5rem;
@@ -45,7 +39,6 @@ h1{
     }
 
     .main-container {
-
         background: #E2F6E5FF;
         padding-top: 1.25rem;
         display: flex;
@@ -55,24 +48,17 @@ h1{
         max-width: 100%;
     }
 
-
 }
 
 
 .drinks-container{
-
-
-
     display: grid;
     grid-template-columns: auto auto auto;
     gap: 0.1rem;
 
-
-
     text-align: center;
     font-size: 30px;
     border-radius: 0.5rem;
-
 }
 
 .display-container{
@@ -81,19 +67,14 @@ h1{
     justify-content: space-between;
 }
 
-
-
 .drink-button{
 
     box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2), -1px -1px 2px rgba(0, 0, 0, 0.1);
-
     height: 4.6rem;
     width: 6.5rem;
-
     margin: 0.5rem;
 
     cursor: pointer;
-
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
@@ -124,7 +105,6 @@ h1{
     display: flex;
     align-items: center;
     justify-content: space-between;
-
 }
 
 .receipt-and-display {
@@ -136,7 +116,6 @@ h1{
     width: 100%;
     background-color: #000;
     margin-top: 1rem;
-
 }
 
 
@@ -144,8 +123,6 @@ h1{
     display: flex;
     align-items: center;
     justify-content: space-between;
-
-
 }
 
 .return-bottom-container{
@@ -154,8 +131,6 @@ h1{
     justify-content: space-between;
     margin-top: 0.5rem;
     margin-bottom: 0.5rem;
-
-
 }
 
 
@@ -165,6 +140,7 @@ h1{
     height: 3rem;
     width: 6rem;
 }
+
 #delete{
     font-size: 0.7rem;
     height: 3rem;
@@ -183,7 +159,6 @@ h1{
 
 .chf-flex{
     display: flex;
-
 }
 
 .img-titel{
@@ -200,12 +175,11 @@ h1{
     background-color: rgba(255, 255, 255, 0.69);
     border: none;
     border-radius: 0.3rem;
-    width: 2rem;
+    width: 2.5rem;
     text-align: right;
     margin-right: 0.3rem;
 }
 
 #calculation-display{
-
     margin:0rem;
 }

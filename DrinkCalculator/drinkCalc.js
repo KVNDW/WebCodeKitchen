@@ -1,12 +1,11 @@
 import { drinks } from './data.js';
-//set up for listener
 
+//set up for listener
 const drinksContainer = document.querySelector('.drinks-container');
 const deletebutton = document.getElementById('delete');
 const display = document.getElementById('display');
 const receipt = document.getElementById('receipt');
 const fullscreenbutton = document.getElementById('to-fullscreen');
-
 const calculationButton = document.getElementById('calculation-button');
 const calculationDisplay = document.getElementById('calculation-display');
 
@@ -39,15 +38,13 @@ const updateValue = (buttonId) =>{
 
         receipt.innerHTML = '';
         totalCost=0;
+        calculationDisplay.textContent = "0";
+        calculationButton.value = 0;
     }
     display.textContent = `${totalCost} CHF`;
 
-    console.log(calculationButton.value);
     const calculationResult = calculationButton.value - totalCost;
     calculationDisplay.textContent = `${calculationResult} CHF`;
-
-
-
 }
 
 const receiptprojector =(drinkname, price)=>{
@@ -64,6 +61,7 @@ const receiptprojector =(drinkname, price)=>{
     const priceContainer = document.createElement('div');
     priceContainer.setAttribute('class','receipt-price');
 
+    //delete function not used
     const closecontainer = document.createElement('button')
     closecontainer.setAttribute('type','button')
     
